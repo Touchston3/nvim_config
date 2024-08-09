@@ -3,14 +3,12 @@ return
     'neovim/nvim-lspconfig',
     dependencies =
     {
-		'hrsh7th/cmp-nvim-lsp', -- autocompletion lsp bridge
 		'williamboman/mason.nvim', -- mason
 		'williamboman/mason-lspconfig.nvim', -- mason lsp bridge
     },
 
     config = function()
 		require("lspconfig")
-		require("cmp_nvim_lsp")
 		require("mason").setup({})
 		require("mason-lspconfig").setup({
 			ensure_installed = {

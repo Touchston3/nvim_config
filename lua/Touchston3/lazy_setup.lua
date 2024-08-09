@@ -13,10 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup(
 {
 	spec = { import = "Touchston3.lazy-plugins" },
- 	install = 
-	{
-		colorscheme = {"everforest"},
-	},
 	checker = {},
 	change_detection = {},
 })
