@@ -9,21 +9,20 @@ return
     },
 
     config = function()
-		local lspconfig = require("lspconfig")
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-		local mason = require("mason")
-		local mason_lspconfig = require("mason-lspconfig")
-
-		mason.setup({})
-		mason_lspconfig.setup(
-		{
-			ensure_installed = 
-			{
+		require("lspconfig")
+		require("cmp_nvim_lsp")
+		require("mason").setup({})
+		require("mason-lspconfig").setup({
+			ensure_installed = {
 				"lua_ls",
 				"pyright",
-
+				"golangci_lint_ls",
 			},
-			automatic_installation = true,
+		})
+		require("mason-lspconfig").setup_handlers({
+			function(lsp_server_name)
+				require("lspconfig")[lsp_server_name].setup({})
+			end,
 		})
 	end
 }
