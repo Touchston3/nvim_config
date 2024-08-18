@@ -41,7 +41,7 @@ vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<S-l>', '$')
-vim.keymap.set('n', '<S-h>', '0')
+vim.keymap.set('n', '<S-h>', '^')
 vim.keymap.set('n', '<S-j>', '<C-d>zz')
 vim.keymap.set('n', '<S-k>', '<C-u>zz')
 

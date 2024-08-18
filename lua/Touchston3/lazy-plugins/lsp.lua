@@ -23,6 +23,7 @@ return
 			function(lsp_server_name)
 				require("lspconfig")[lsp_server_name].setup({
 					capabilities = capabilities,
+
 				})
 			end,
 		})

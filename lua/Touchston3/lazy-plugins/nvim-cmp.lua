@@ -15,9 +15,7 @@ return { -- Autocompletion
 			},
 			completion = { completeopt = 'menu,menuone,noinsert' },
 			mapping = cmp.mapping.preset.insert({
-				['<S-n>'] = cmp.mapping.select_next_item(),
-				['<S-p>'] = cmp.mapping.select_prev_item(),
-				['<S-y>'] = cmp.mapping.confirm(),
+				['<tab>'] = cmp.mapping.confirm(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lua" },
