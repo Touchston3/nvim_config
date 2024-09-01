@@ -1,5 +1,4 @@
-return 
-{ -- Highlight, edit, and navigate code
+return { -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",
     build = ':TSUpdate',
 	dependencies = {
@@ -8,7 +7,7 @@ return
 	-- Gonna need to figure out what I am doing with all of these keybindings and usecases
     config = function()
     	require('nvim-treesitter.configs').setup({
-			ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'go', },
+			auto_install = true,
 		   	highlight = { enable = true,},
 	  		indent = { enable = true, },
 			incremental_selection = { 
